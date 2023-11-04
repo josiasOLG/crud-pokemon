@@ -1,0 +1,108 @@
+.pk-deck{
+  background: #fff;
+  .card {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fcfcfc;
+    border: 1px solid #ebebeb;
+    padding-left: 10px;
+    .pk-card__text{
+      // min-height: 120px;
+    }
+    .pk-gradient {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 15%;
+      height: 100%;
+      background: rgb(251,111,255);
+      background: linear-gradient(279deg, rgba(251,111,255,0) 0%, rgba(255,215,111,0.6727065826330532) 63%);
+      z-index: 1;
+    }
+    .pk-image {
+      max-width: 80px; /* Ajustado para ocupar a largura total do card */
+      border-radius: 20px;
+    }
+    .pk-btn__delete{
+      color: #333;
+    }
+    .pk-title{
+      margin: 0;
+      font-size: 0.7em;
+      font-weight: 400;
+      line-height: 15px;
+      margin-top: 10px;
+    }
+    .pk-subtitle{
+      margin: 0;
+      text-align: left;
+      font-size: 0.8em;
+      font-weight: 900;
+      line-height: 18px;
+      color: #333;
+    }
+    .pk-start{
+      margin: 0;
+      text-align: left;
+      line-height: 20px;
+    }
+    .pk-description{
+      margin: 0;
+      text-align: left;
+    }
+  }
+  .pk-btn__edit {
+    margin-top: 20px; /* Alinhado o botão para a parte inferior do card */
+    border-radius: 20px;
+    color: #fff;
+    background: rgb(128,111,255);
+    background: linear-gradient(279deg, rgba(128,111,255,1) 0%, rgba(111,126,255,1) 7%, rgba(161,111,255,1) 100%);
+  }
+  .pk-title__details{
+    font-size: 2em;
+    font-weight: 900;
+    margin: 0;
+  }
+  .pk-subtitle__details{
+    font-weight: 400;
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 50px;
+  }
+  .pk-nome__details{
+    font-weight: 700;
+    margin: 0;
+    span{
+      font-weight: 400;
+    }
+  }
+  .pk-cardNome__details{
+    font-weight: 700;
+    margin: 5px 0;
+  }
+
+}
+
+
+.pk-select{
+  margin-bottom: 40px;
+  .pk-select__image{
+    max-width: 50px;
+    border-radius: 10px;
+  }
+  .pk-select__text{
+    margin:0 10px;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

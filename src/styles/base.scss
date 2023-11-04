@@ -1,0 +1,20 @@
+body{
+  // background: rgb(195,55,100);
+  // background: linear-gradient(279deg, rgba(195,55,100,1) 0%, rgba(29,38,113,1) 100%);
+  background: #fff;
+}
+
+
+.row {
+  display: flex;
+}
+.z-2{
+  z-index: 2;
+}
+.col-70 {
+  flex: 70;
+}
+
+.col-30 {
+  flex: 30;
+}

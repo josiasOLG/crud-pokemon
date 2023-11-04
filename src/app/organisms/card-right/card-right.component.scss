@@ -1,0 +1,62 @@
+.pk-card__right{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  .pk-quantidade{
+    font-size: 0.8em;
+    font-weight: 400;
+    margin: 0;
+  }
+  .pk-texto{
+    font-weight: 900;
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+  }
+  .pk-card{
+    margin-bottom: 10px;
+    .card {
+      position: relative;
+      overflow: hidden;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      background-color: #fff;
+      .flex {
+        z-index: 2;
+      }
+    }
+    .pk-btn__edit{
+      border-radius: 25px;
+    }
+    .pk-image {
+      max-width: 50px; /* Ajustado para ocupar a largura total do card */
+      border-radius: 20px;
+    }
+    .pk-btn__edit {
+      margin-top: 20px; /* Alinhado o botão para a parte inferior do card */
+      border-radius: 20px;
+    }
+    .pk-btn__delete{
+      color: #333;
+    }
+    .pk-subtitle{
+      margin: 0;
+      padding-top: 5px;
+      text-align: center;
+      font-size: 0.6em;
+      font-weight: 900;
+      line-height: 18px;
+      color: #333;
+    }
+    .pk-start{
+      margin: 0;
+      text-align: center;
+      line-height: 20px;
+    }
+    .pk-description{
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+}
+

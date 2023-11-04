@@ -1,0 +1,27 @@
+
+.pk-item__nav{
+  display: flex;
+  padding-bottom: 10px;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  &:hover{
+    // background: rgb(128,111,255);
+    // background: linear-gradient(279deg, rgba(128,111,255,1) 0%, rgba(111,126,255,1) 7%, rgba(161,111,255,1) 100%);
+    .pk-label{
+      color: rgba(161,111,255,1);
+    }
+    .pk-icon{
+      color: rgba(161,111,255,1);
+    }
+  }
+  .pk-icon{
+    color: #333;
+  }
+  .pk-label{
+    margin-left: 10px;
+    font-weight: 300;
+    color: #333;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+}

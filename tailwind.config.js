@@ -6,9 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        color_blue_light: '#3D7DCA',
-        color_blue_dark: '#003A70',
+        primary: '#3D7DCA',
+        secondary: '#003A70',
       },
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ['disabled'],
     },
   },
   plugins: [

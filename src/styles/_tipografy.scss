@@ -1,0 +1,17 @@
+:root {
+  --igx-h1-font-family: 'Roboto', sans-serif;
+  --igx-h1-font-weight: 500;
+  --igx-h1-font-size: 2rem;
+  --igx-h1-font-style: normal;
+  --igx-h1-letter-spacing: normal;
+  --igx-h1-text-transform: none;
+  --igx-h1-line-height: 1.5;
+  --igx-h1-margin-top: 0;
+  --igx-h1-margin-bottom: 0.5em;
+  --igx-body-1-font-family: 'Roboto', sans-serif;
+}
+
+:host {
+  --igx-h1-font-family: 'Roboto', sans-serif;
+  --igx-body-1-font-family: 'Roboto', sans-serif;
+}

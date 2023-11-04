@@ -1,0 +1,26 @@
+.pk-header__top{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #ebebeb;
+  .btn{
+    float: right;
+    background: rgb(128,111,255);
+    background: linear-gradient(279deg, rgba(128,111,255,1) 0%, rgba(111,126,255,1) 7%, rgba(161,111,255,1) 100%);
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 50%;
+    color: white;
+    padding: 10px;
+    font-weight: 300;
+  }
+  .pk-input{
+    --idle-bottom-line-color: none ;
+    .icon{
+      color: #333;
+    }
+  }
+}
+

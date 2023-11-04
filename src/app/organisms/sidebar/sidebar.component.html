@@ -1,0 +1,11 @@
+<igx-nav-drawer [isOpen]="true">
+  <ng-template igxDrawer class="pk-container__nav">
+      <app-profile-header></app-profile-header>
+      <app-sidebar-content title="Paginas">
+        <app-sidebar-list [items]="items"></app-sidebar-list>
+      </app-sidebar-content>
+      <app-sidebar-content title="Ações">
+        <app-sidebar-list [items]="items2"></app-sidebar-list>
+      </app-sidebar-content>
+  </ng-template>
+</igx-nav-drawer>

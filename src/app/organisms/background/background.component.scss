@@ -1,0 +1,10 @@
+.app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);  /* Valor de desfoque aumentado */
+  -webkit-backdrop-filter: blur(1px);  /* Valor de desfoque aumentado */
+  background-color: rgba(255, 255, 255, 0.1);  /* Fundo semi-transparente adicionado */
+}
