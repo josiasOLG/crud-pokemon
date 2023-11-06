@@ -1,0 +1,26 @@
+.pk-home-edit__card{
+  .text-xs{
+    font-weight: 900;
+    color: #333;
+    font-size: 0.6em;
+    margin: 0;
+    line-height: normal;
+  }
+  .text-2xl{
+    color: #333;
+    font-weight: 400;
+    font-size: 0.6em;
+    margin: 10px 0 0 0;
+    line-height: normal;
+  }
+
+  .bg-indigo-500{
+    background-color: rgb(18, 53, 209);
+  }
+  .bg-green-500{
+    background-color: rgb(187, 18, 209);
+  }
+  .bg-red-500{
+    background-color: rgb(209, 18, 18);
+  }
+}

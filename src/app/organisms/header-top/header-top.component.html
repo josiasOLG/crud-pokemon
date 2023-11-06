@@ -1,18 +1,20 @@
-<div class="pk-header__top shadow-sm">
+<div class="pk-header__top shadow-sm bg-white dark:bg-black">
   <div class="row">
     <div class="col-70">
-      <igx-input-group class="pk-input">
-        <igx-prefix class="icon">
-          <igx-icon>search</igx-icon>
-        </igx-prefix>
-        <input igxInput type="text" placeholder="Pesquisar" />
-      </igx-input-group>
+      <form [formGroup]="form">
+        <igx-input-group class="pk-input">
+          <igx-prefix class="text-black-light dark:text-white">
+            <igx-icon>search</igx-icon>
+          </igx-prefix>
+          <input igxInput type="text" formControlName="name" (change)="filterName()" placeholder="Pesquisar" />
+        </igx-input-group>
+      </form>
     </div>
     <div class="col-30 flex items-center justify-end">
       <!-- Substitua 'path_to_image' pelo caminho correto da imagem do usuário -->
       <img src="../../../assets/images/image-user.png" alt="Usuário" class="rounded-full h-10 w-10 object-cover mr-2">
       <!-- Substitua 'Nome do Usuário' pelo nome do usuário -->
-      <span class="hidden md:block pk-title__user">{{this.loginDataArray$?.login}}</span>
+      <span class="hidden md:block pk-title__user text-black-light dark:text-white">{{this.loginDataArray$?.login}}</span>
     </div>
   </div>
 </div>

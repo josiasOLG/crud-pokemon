@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, HostBinding, ViewChild } from '@angular/core';
 import { IgxToastComponent } from 'igniteui-angular';
+import { ThemeService } from './pages/services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,7 @@ import { IgxToastComponent } from 'igniteui-angular';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(){}
+
   title = 'crud-pokemon';
 }

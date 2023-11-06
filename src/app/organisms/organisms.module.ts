@@ -8,6 +8,10 @@ import { SidebarContentComponent } from './sidebar-list-content/sidebar-list-con
 import { HeaderTopComponent } from './header-top/header-top.component';
 import { CardRightComponent } from './card-right/card-right.component';
 import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-charts';
+import { ReactiveFormsModule } from '@angular/forms';
+import { CardListComponent } from './card-list/card-list.component';
+import { StatisticsCardsComponent } from './statistics-cards/statistics-cards.component';
+import { WelcomeBlockComponent } from './welcome-block/welcome-block.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,10 @@ import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-char
     BackgroundComponent,
     SidebarContentComponent,
     HeaderTopComponent,
-    CardRightComponent
+    CardRightComponent,
+    CardListComponent,
+    StatisticsCardsComponent,
+    WelcomeBlockComponent
   ],
   imports: [
     CommonModule,
@@ -25,14 +32,18 @@ import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-char
     IgxIconModule,
     IgxButtonModule,
     IgxPieChartModule,
-    IgxCategoryChartModule
+    IgxCategoryChartModule,
+    ReactiveFormsModule
   ],
   exports: [
     SidebarComponent,
     BackgroundComponent,
     SidebarContentComponent,
     HeaderTopComponent,
-    CardRightComponent
+    CardRightComponent,
+    CardListComponent,
+    StatisticsCardsComponent,
+    WelcomeBlockComponent
   ]
 })
 export class OrganismsModule { }

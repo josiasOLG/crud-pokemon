@@ -95,6 +95,27 @@ export abstract class BaseApiService<T> implements ApiServiceInterface<T> {
     }
   }
 
+    /**
+   * @description
+   * Busca um único item por seu name.
+   * @param name O ID do item a ser buscado.
+   */
+    async getByNameDeck(name: string | number): Promise<T> {
+      try {
+        // Normalizando a entrada para uma busca insensível a maiúsculas/minúsculas e espaços.
+        const normalizedQuery = encodeURIComponent(String(name).toLowerCase().trim());
+
+        const response = (await this.http
+          .get<T>(`${this.baseUrl}?q=${normalizedQuery}`)
+          .toPromise()) as T;
+
+        return response;
+      } catch (error: any) {
+        return Promise.reject(this.handleError(error));
+      }
+    }
+
+
   /**
    * @description
    * Busca um item pelo nome.

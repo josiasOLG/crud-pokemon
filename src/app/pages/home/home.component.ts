@@ -66,6 +66,13 @@ export class HomeComponent implements OnInit {
         },
       ]
     );
+
+    this.stateManagementService.onDeckFilter().subscribe(
+      (res: DeckDto[]) => {
+        this.cardPokemon = res;
+      },
+      (error: any) => {}
+    )
   }
 
   /**

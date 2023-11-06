@@ -1,0 +1,64 @@
+.card {
+  position: relative;
+  overflow: visible;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fcfcfc;
+  border: 1px solid #ebebeb;
+  .pk-card__dropdow{
+    position: absolute;
+    top: -9%;
+    left: 100%;
+    width: 60px;
+    button{
+      color: #806fff;
+    }
+  }
+  .pk-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    background: rgb(251,111,255);
+    background: linear-gradient(279deg, rgba(251,111,255,0) 0%, rgba(255,215,111,0.6727065826330532) 63%);
+    z-index: 1;
+  }
+  .pk-image {
+    max-width: 80px; /* Ajustado para ocupar a largura total do card */
+    border-radius: 20px;
+  }
+  .pk-btn__edit {
+    margin-top: 20px; /* Alinhado o botão para a parte inferior do card */
+    border-radius: 20px;
+  }
+  .pk-btn__delete{
+    color: #806fff;
+  }
+  .pk-title{
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: 400;
+    line-height: 15px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .pk-subtitle{
+    margin: 0;
+    text-align: left;
+    font-size: 0.8em;
+    font-weight: 900;
+    line-height: 18px;
+    color: #333;
+  }
+  .pk-start{
+    margin: 0;
+    text-align: left;
+    line-height: 20px;
+  }
+  .pk-description{
+    margin: 0;
+    text-align: left;
+  }
+}

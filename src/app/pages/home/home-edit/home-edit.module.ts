@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PokemonApiService } from 'src/app/service/pokemon-api.service';
 import { IgxGridModule, IgxIconModule } from 'igniteui-angular';
 import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-charts';
+import { OrganismsModule } from 'src/app/organisms/organisms.module';
 
 const routes: Routes = [
   { path: '', component: HomeEditComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     IgxIconModule,
+    OrganismsModule
   ],
   providers: [
     PokemonApiService

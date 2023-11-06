@@ -1,75 +1,7 @@
 
 <div class="pk-edit-home">
   <div class="container mx-auto p-4">
-    <!-- Welcome message and user details -->
-
-    <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg rounded-lg p-6 text-white mb-6">
-      <div class="flex justify-between items-center">
-        <div>
-          <h2 class="text-xl font-bold pk-title__page">Bem-vindo aos detalhes</h2>
-          <p class="text-sm pk-subtitle__page">Home / Deck</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cards for statistics -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-      <!-- Total Revenue -->
-      <!-- Esta seção pode ser personalizada com seus dados, como número de Pokémons, etc -->
-      <div class="bg-white rounded-lg p-4 pk-home-edit__card shadow-md">
-        <div class="flex items-center">
-          <div class="p-3  bg-indigo-500 text-white mr-4">
-            <igx-icon fontSet="material-icons"  class="text-xl">pets</igx-icon>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 uppercase">Número de Pokémons</p>
-            <p class="text-2xl">{{ cardPokemon.length }}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- New Employees - pode ser usado para número de cartas de treinador -->
-      <div class="bg-white rounded-lg p-4 pk-home-edit__card shadow-md">
-        <div class="flex items-center">
-          <div class="p-3  bg-green-500 text-white mr-4">
-            <igx-icon fontSet="material-icons" class="text-xl">school</igx-icon>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 uppercase">Número de Cartas de Treinador</p>
-            <p class="text-2xl">{{ getTrainerCardCount() }}</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total Expenses -->
-      <!-- Podemos personalizar isso para mostrar tipos únicos ou cores únicas -->
-      <div class="bg-white rounded-lg p-4  pk-home-edit__card shadow-md">
-        <div class="flex items-center">
-          <div class="p-3 bg-red-500 text-white mr-4">
-            <igx-icon fontSet="material-icons" class="text-xl">palette</igx-icon>
-          </div>
-          <div>
-            <p class="text-xs text-gray-500 uppercase">Número de Cores Únicas</p>
-            <p class="text-2xl">{{ getUniqueColors().length }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white rounded-lg p-4  pk-home-edit__card shadow-md" *ngIf="getUniqueColors().length > 0">
-        <table>
-          <tr *ngFor="let color of getUniqueColors()">
-            <td
-              class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
-            >
-              Cor:
-            </td>
-            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              {{ color }}
-            </td>
-          </tr>
-        </table>
-      </div>
-      <!-- Você pode adicionar mais cartões aqui seguindo o mesmo padrão para os tipos únicos, etc -->
-    </div>
+    <app-welcome-block></app-welcome-block>
+    <app-statistics-cards [deckAll]="deckAll" [cardPokemon]="cardPokemon"></app-statistics-cards>
   </div>
 </div>

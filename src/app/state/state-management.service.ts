@@ -8,8 +8,21 @@ import { Observable, Subscription } from 'rxjs';
 export class StateManagementService {
   private _stateChanged: EventEmitter<any> = new EventEmitter();
   private _stateCardAll: EventEmitter<any> = new EventEmitter();
+  private _stateDeckFilter: EventEmitter<any> = new EventEmitter();
 
   constructor(private store: Store){}
+
+  emitDeckFilter(data: any) {
+    this._stateDeckFilter.emit(data);
+  }
+  onDeckFilter() {
+    return this._stateDeckFilter;
+  }
+  completeDeckFilter() {
+    return this._stateDeckFilter.complete();
+  }
+
+
   emitStateChange(data: any) {
     this._stateChanged.emit(data);
   }

@@ -87,4 +87,10 @@ export class DeckApiService extends BaseApiService<DeckDto> {
     this.setBaseUrl('http://localhost:3000/decks');
     return this.getByUsuario(id);
   }
+
+
+  filterHome(text: any): Promise<any> {
+    this.setBaseUrl('http://localhost:3000/decks');
+    return this.getByNameDeck(text);
+  }
 }
