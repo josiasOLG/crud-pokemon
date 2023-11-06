@@ -25,7 +25,7 @@ Com a API rodando, inicie o projeto Angular com:
 
 `npm start`
 
-# Utilização do compodoc ara geração de documentação do codigo
+# Utilização do compodoc para geração de documentação do codigo
 
 ## Geração da Documentação com Compodoc
 
