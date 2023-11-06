@@ -1,27 +1,45 @@
 # CrudPokemon
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+T# Instruções para Execução do Projeto
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js versão v18.15.0
+- Angular versão 13.3.11
 
-## Code scaffolding
+## Configuração do Ambiente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Antes de iniciar o projeto, instale as dependências com o seguinte comando:
 
-## Build
+`npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Inicialização da API
 
-## Running unit tests
+Utilizamos o `json-server` para simular uma API REST. Inicie-o com o comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`npm run api:server`
 
-## Running end-to-end tests
+## Executando o Projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Com a API rodando, inicie o projeto Angular com:
 
-## Further help
+`npm start`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Tecnologias Utilizadas
+
+- **API de Pokémon TCG**: Para dados de cartas Pokémon.
+- **Tailwind CSS**: Framework de UI para estilos.
+- **Infragistics**: Biblioteca de UI com componentes ricos para Angular.
+- **NgRx**: Biblioteca para gerenciamento de estado baseada em Redux.
+- **Redux-Persist**: Para persistir o estado da aplicação entre as sessões.
+- **EventEmitter**: Gerenciamento de eventos para comunicação entre componentes.
+
+## Padrões de Projeto Adotados
+
+- **Atomic Design**: Metodologia para criar sistemas de design.
+- **SOLID**: Princípios de design orientado a objetos para melhor manutenção e extensibilidade do código.
+
+## Notas Adicionais
+
+- Certifique-se de seguir as melhores práticas e padrões avançados.
+- A arquitetura do projeto foi cuidadosamente estruturada para permitir escalabilidade e manutenibilidade.
