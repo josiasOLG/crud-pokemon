@@ -65,4 +65,8 @@ npm install --save ngx-cookie-service@^13.2.1
 # Instale jszip para trabalhar com arquivos ZIP
 npm install --save jszip@^3.7.1
 
+#Json server
+npm install -g json-server
+
+
 ```
