@@ -1,12 +1,11 @@
 .pk-home{
   padding-left: 20px;
   padding-right: 20px;
-  background: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
   .card {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -15,6 +14,15 @@
     padding-left: 10px;
     .pk-card__text{
       // min-height: 120px;
+    }
+    .pk-card__dropdow{
+      position: absolute;
+      top: -9%;
+      left: 100%;
+      width: 60px;
+      button{
+        color: #806fff;
+      }
     }
     .pk-gradient {
       position: absolute;
@@ -35,7 +43,7 @@
       border-radius: 20px;
     }
     .pk-btn__delete{
-      color: #333;
+      color: #806fff;
     }
     .pk-title{
       margin: 0;
@@ -43,6 +51,7 @@
       font-weight: 400;
       line-height: 15px;
       margin-top: 10px;
+      text-align: center;
     }
     .pk-subtitle{
       margin: 0;
@@ -63,5 +72,21 @@
     }
   }
 
+
+  .pk-home__title{
+    font-weight: 900;
+    font-size: 1.5em;
+    margin: 0;
+    line-height: 40px;
+  }
+  .pk-home__subtitle{
+    font-weight: 400;
+    font-size: 1.1em;
+    margin: 0;
+  }
+  .pk-home__icon{
+    margin-top: 10px;
+    font-size: 10em;
+  }
 }
 

@@ -8,8 +8,11 @@
         <input igxInput type="text" placeholder="Pesquisar" />
       </igx-input-group>
     </div>
-    <div class="col-30">
-      <button igxButton="gradient" class="btn" type="button">Criar baralho</button>
+    <div class="col-30 flex items-center justify-end">
+      <!-- Substitua 'path_to_image' pelo caminho correto da imagem do usuário -->
+      <img src="../../../assets/images/image-user.png" alt="Usuário" class="rounded-full h-10 w-10 object-cover mr-2">
+      <!-- Substitua 'Nome do Usuário' pelo nome do usuário -->
+      <span class="hidden md:block pk-title__user">{{this.loginDataArray$?.login}}</span>
     </div>
   </div>
 </div>

@@ -1,41 +1,61 @@
 <div class="pk-home">
-  <div class="grid grid-cols-4 md:grid-cols-5 gap-4">
-    <div
-      class="pk-card grid grid-cols-5 card relative"
-      *ngFor="let deck of cardPokemon"
-    >
-      <button
-        class="absolute top-2 right-0 text-white font-bold py-1 px-2 pk-btn__delete"
-      >
-        <igx-icon fontSet="material">more_vert</igx-icon>
-      </button>
 
-      <div class="col-span-12 flex">
-        <!-- <img
-          class="w-4/5 border border-gray-300 pk-image"
-          [src]="deck?.card"
-          [alt]="deck.name"
-        /> -->
-      </div>
-      <div class="col-span-12 flex flex-col pk-card__text">
-        <p class="text-sm text-gray-500 pk-title">{{ deck.name }}</p>
-        <!-- <p class="text-lg font-semibold pk-subtitle">
-          {{ deck.set.name }}
-        </p> -->
-        <!-- <div class="text-yellow-400 pk-start">
-          {{ getStars(+deck.hp) }}
-        </div> -->
-      </div>
-      <div class="col-span-12 flex items-center justify-center">
-        <!-- <button
-          igxButton="gradient"
-          class="bg-gradient-to-r from-blue-400 to-purple-500 text-white py-2 px-4 rounded mb-2 pk-btn__edit"
-        >
-          Editar
-        </button> -->
-        <!-- <button igxButton="gradient" class="bg-gradient-to-r from-red-400 to-orange-500 text-white py-2 px-4 rounded mb-2">Remover</button> -->
-        <!-- <button igxButton="gradient" class="bg-gradient-to-r from-green-400 to-teal-500 text-white py-2 px-4 rounded">Detalhes</button> -->
+  <div class="grid grid-cols-4 md:grid-cols-5 gap-4 relative">
+    <div class="col-span-12">
+      <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 shadow-lg rounded-lg p-6 text-white mb-6">
+        <div class="flex justify-between items-center">
+          <div>
+            <h1 class="pk-home__title">
+              Comece a construir seu baralho!
+            </h1>
+            <p class="mt-1 pk-home__subtitle">
+              Adicione cartas e crie estratégias imbatíveis para vencer seus oponentes.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+
+
+    <ng-container *ngIf="cardPokemon.length; else noDataTemplate">
+      <div class="pk-card grid grid-cols-5 card" *ngFor="let deck of cardPokemon">
+
+        <!-- Botão para acionar o dropdown -->
+        <button class="absolute top-2 right-0 text-white font-bold py-1 px-2 pk-btn__delete" (click)="toggleDropdown(deck.id)">
+          <igx-icon fontSet="material">more_vert</igx-icon>
+        </button>
+
+        <!-- Dropdown -->
+        <div *ngIf="dropdownStates[deck.id]" class="absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-lg shadow-lg z-10 pk-card__dropdow">
+          <!-- Aqui você pode adicionar os botões com os ícones -->
+          <button class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50" (click)="editDeck(deck)">
+            <igx-icon fontSet="material" class="text-red-500 mr-2">edit</igx-icon>
+          </button>
+          <button class="block w-full px-4 py-2 text-left text-sm text-gray-700 hover:bg-gray-50">
+            <igx-icon fontSet="material" class="text-blue-500 mr-2" (click)="deleteDeck(deck)">delete</igx-icon>
+          </button>
+        </div>
+
+        <!-- Conteúdo do card -->
+        <div class="col-span-12 flex justify-center">
+          <img
+            class="col-span-12 pk-image"
+            src="../../../assets/images/baralho.png"
+          />
+        </div>
+        <div class="col-span-12 flex flex-col pk-card__text ">
+          <p class="text-sm text-gray-500 pk-title justify-center align-center">{{ deck.name }}</p>
+        </div>
+
+      </div>
+    </ng-container>
+    <ng-template #noDataTemplate>
+      <div class="col-span-12 items-center justify-center h-screen">
+        <div class="col-span-12 items-center mt-5 justify-center">
+          <p class="text-gray-400  pk-home__subtitle">Você não possui baralhos</p>
+          <igx-icon class="pk-home__icon" fontSet="material">casino</igx-icon>
+        </div>
+      </div>
+    </ng-template>
   </div>
 </div>

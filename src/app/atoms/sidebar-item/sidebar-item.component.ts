@@ -1,5 +1,6 @@
 // src/app/atoms/sidebar-item/sidebar-item.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-sidebar-item',
@@ -10,8 +11,11 @@ export class SidebarItemComponent {
   @Input() icon?: string;
   @Input() label?: string;
   @Input() isActive?: boolean;
+  @Input() action?: () => void;
 
   navigate() {
-
+    if(this.action) {
+      this.action();  // Invocando a ação
+    }
   }
 }

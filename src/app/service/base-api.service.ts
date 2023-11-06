@@ -51,7 +51,7 @@ export abstract class BaseApiService<T> implements ApiServiceInterface<T> {
    * Método para tratar erros HTTP.
    * @param error O objeto de erro.
    */
-  private handleError(error: HttpErrorResponse) {
+  public handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
       errorMessage = `Erro: ${error.error.message}`;
@@ -94,6 +94,24 @@ export abstract class BaseApiService<T> implements ApiServiceInterface<T> {
       return Promise.reject(this.handleError(error));
     }
   }
+
+  /**
+   * @description
+   * Busca um item pelo nome.
+   * @param nome O nome do item a ser buscado.
+   * @returns Uma Promise que resolve para o item encontrado, ou rejeita com um erro se algo der errado.
+   */
+  async getByUsuario(usuario: any): Promise<T> {
+    try {
+      const response = (await this.http
+        .get<T>(`${this.baseUrl}?usuario=${usuario}&enabled=true`)
+        .toPromise()) as T;
+      return response;
+    } catch (error: any) {
+      return Promise.reject(this.handleError(error));
+    }
+  }
+
 
   /**
    * @description

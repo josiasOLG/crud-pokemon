@@ -14,7 +14,7 @@ import { BaseApiService } from './base-api.service';
 @Injectable({
   providedIn: 'root',
 })
-export class PokemonService extends BaseApiService<PokemonDto> {
+export class PokemonApiService extends BaseApiService<PokemonDto> {
   /**
    * @description
    * Construtor que inicializa o HttpClient.

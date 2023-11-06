@@ -1,0 +1,48 @@
+<div class="pk-login">
+  <div class="flex flex-col md:flex-row min-h-screen bg-blue-500">
+    <!-- Image Section for larger screens -->
+    <div class="md:w-1/2 bg-blue-500 p-10" style="background-image: url('../../../assets/images/background.jpeg'); background-repeat: no-repeat; background-size: cover; background-blend-mode: multiply;">
+      <!-- <h1 class="text-white font-bold text-4xl mb-4">Bem vindo ao Pokemon card</h1> -->
+      <!-- <p class="text-white text-lg">The best place to buy and sell goods</p> -->
+    </div>
+
+
+    <!-- Main Section -->
+    <main class="w-full md:w-1/2 flex items-center justify-center bg-white">
+      <div class="max-w-md w-full space-y-8">
+        <div class="bg-white p-10 rounded-xl">
+          <h5 class="text-center text-3xl font-extrabold text-gray-900 pk-login__title">
+            Ola, obrigado por acessar
+          </h5>
+          <p class="text-center text-sm text-gray-600 pk-login__subtitle">
+            Faça login para ter acesso a todos os seus baralhos
+          </p>
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mt-1 space-y-6">
+              <div class="rounded-md shadow-sm -space-y-px">
+                <igx-input-group>
+                  <igx-prefix>
+                    <igx-icon>email</igx-icon>
+                  </igx-prefix>
+                  <input igxInput type="email" formControlName="login" [placeholder]="'Email address'">
+                </igx-input-group>
+                <igx-input-group>
+                  <igx-prefix>
+                    <igx-icon>password</igx-icon>
+                  </igx-prefix>
+                  <input igxInput type="password" formControlName="password" [placeholder]="'Password'">
+                </igx-input-group>
+              </div>
+              <div>
+                <button type="submit" class="pk-login__btn group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                  Acessar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+

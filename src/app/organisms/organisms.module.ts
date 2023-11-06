@@ -7,6 +7,7 @@ import { BackgroundComponent } from './background/background.component';
 import { SidebarContentComponent } from './sidebar-list-content/sidebar-list-content.component';
 import { HeaderTopComponent } from './header-top/header-top.component';
 import { CardRightComponent } from './card-right/card-right.component';
+import { IgxCategoryChartModule, IgxPieChartModule } from 'igniteui-angular-charts';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,8 @@ import { CardRightComponent } from './card-right/card-right.component';
     IgxInputGroupModule,
     IgxIconModule,
     IgxButtonModule,
+    IgxPieChartModule,
+    IgxCategoryChartModule
   ],
   exports: [
     SidebarComponent,

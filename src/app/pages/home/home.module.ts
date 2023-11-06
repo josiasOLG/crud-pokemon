@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { PokemonService } from 'src/app/service/pokemon-api.service';
+import { PokemonApiService } from 'src/app/service/pokemon-api.service';
 import { IgxIconModule } from 'igniteui-angular';
 
 const routes: Routes = [
@@ -17,7 +17,7 @@ const routes: Routes = [
     IgxIconModule
   ],
   providers: [
-    PokemonService
+    PokemonApiService
   ],
   exports: [HomeComponent]
 })

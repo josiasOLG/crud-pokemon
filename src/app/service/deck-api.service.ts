@@ -14,7 +14,7 @@ import { BaseApiService } from './base-api.service';
 @Injectable({
   providedIn: 'root',
 })
-export class DeckService extends BaseApiService<DeckDto> {
+export class DeckApiService extends BaseApiService<DeckDto> {
   /**
    * @description
    * Construtor que inicializa o HttpClient.
@@ -26,6 +26,7 @@ export class DeckService extends BaseApiService<DeckDto> {
   }
 
   /**
+   * @CompoDoc
    * @description
    * Método para obter o complemento de URL específico do serviço Pokémon.
    *
@@ -36,36 +37,54 @@ export class DeckService extends BaseApiService<DeckDto> {
   }
 
   /**
+   * @CompoDoc
    * @description
    * Método para buscar todos os cartões de Pokémon.
    *
    * @returns Uma promessa que resolve para uma lista de cartões de Pokémon.
    */
-  getAllCardsDeck(param?: any): Promise<any> {
-    return this.get(param);
-  }
-
-  addDeckToDeck(card: DeckDto): Promise<any> {
-    return this.post(card);
-  }
-
-  addNameDeck(card: DeckDto): Promise<any> {
-    this.setBaseUrl('http://localhost:3000/decks');
-    return this.post(card);
-  }
-
   getAllCardsDeckLocalId(id: string): Promise<any> {
     this.setBaseUrl('http://localhost:3000/decks');
     return this.getById(id);
   }
 
+  /**
+   * @CompoDoc
+   * @description
+   * Método para adicionar um nome de deck.
+   *
+   * @param card O objeto DeckDto contendo os detalhes do deck.
+   * @returns Uma promessa que resolve quando o nome do deck é adicionado com sucesso.
+   */
+  addNameDeck(card: DeckDto): Promise<any> {
+    this.setBaseUrl('http://localhost:3000/decks');
+    return this.post(card);
+  }
+
+  /**
+   * @CompoDoc
+   * @description
+   * Método para atualizar um deck existente.
+   *
+   * @param id O ID do deck a ser atualizado.
+   * @param item O objeto com as informações atualizadas do deck.
+   * @returns Uma promessa que resolve quando o deck é atualizado com sucesso.
+   */
   updateDeck(id: string, item: any): Promise<any> {
     this.setBaseUrl('http://localhost:3000/decks');
     return this.put(id, item);
   }
 
-  getAllDecksLocal(): Promise<any> {
+  /**
+   * @CompoDoc
+   * @description
+   * Método para buscar todos os decks locais de um usuário.
+   *
+   * @param id O ID do usuário.
+   * @returns Uma promessa que resolve para uma lista de decks do usuário.
+   */
+  getAllDecksLocal(id: any): Promise<any> {
     this.setBaseUrl('http://localhost:3000/decks');
-    return this.get();
+    return this.getByUsuario(id);
   }
 }

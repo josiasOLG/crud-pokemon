@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar-list.component.scss']
 })
 export class SidebarListComponent {
-  @Input() items: { icon: string, label: string }[] = [];
+  @Input() items: { icon: string, label: string, action?: () => void}[] = [];
 }

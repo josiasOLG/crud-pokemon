@@ -12,10 +12,17 @@ import { IgxDialogModule, IgxToastModule } from 'igniteui-angular';
 import { AlertComponent } from './atoms/alert/alert.component';
 import { AuthLayoutComponent } from './auth-layout.component';
 import { MainLayoutComponent } from './main-layout.component';
+import { ShellComponent } from './pages/shell/shell.component';
+import { StoreModule } from '@ngrx/store';
+import { rootReducer } from './state/redux/reducers/index.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { localStorageSyncReducer } from './state/redux/local-storage-sync.config';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    ShellComponent,
     AlertComponent,
     MainLayoutComponent,
     AuthLayoutComponent
@@ -28,7 +35,11 @@ import { MainLayoutComponent } from './main-layout.component';
     HttpClientModule,
     ReactiveFormsModule,
     IgxToastModule,
-    IgxDialogModule
+    IgxDialogModule,
+    StoreModule.forRoot(rootReducer, { metaReducers: [localStorageSyncReducer] }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+    }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiKeyInterceptor, multi: true },

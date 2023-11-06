@@ -1,0 +1,17 @@
+.pk-login{
+  .pk-login__title{
+    font-weight: 900;
+    font-size: 1.6em;
+    margin: 0 0 5px 0;
+  }
+  .pk-login__subtitle{
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0;
+  }
+  .pk-login__btn{
+    font-weight: bold;
+    background: rgb(128,111,255);
+    background: linear-gradient(279deg, rgba(128,111,255,1) 0%, rgba(111,126,255,1) 7%, rgba(161,111,255,1) 100%);
+  }
+}

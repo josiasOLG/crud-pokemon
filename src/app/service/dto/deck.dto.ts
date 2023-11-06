@@ -1,3 +1,4 @@
+import { LoginDto } from "./login.dto";
 import { PokemonDto } from "./pokemon.dto";
 
 export class DeckDto {
@@ -7,6 +8,7 @@ export class DeckDto {
     public supertypes?: string[],
     public types?: string[],
     public card?: PokemonDto[],
-    public enabled?: boolean
+    public enabled?: boolean,
+    public usuario?: any,
   ) {}
 }

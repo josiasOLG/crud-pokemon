@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { DeckDto } from '../dto/deck.dto';
-import { DeckService } from '../deck-api.service';
+import { DeckApiService } from '../deck-api.service';
 import { StateManagementService } from '../../state/state-management.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DeckManagerService {
-  constructor(private deckService: DeckService, private stateManagementService: StateManagementService) {}
+  constructor(private deckService: DeckApiService, private stateManagementService: StateManagementService) {}
 
   async updateDeck(deckId: string, deck: DeckDto) {
     try {
