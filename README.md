@@ -1,6 +1,6 @@
 # CrudPokemon
 
-T# Instruções para Execução do Projeto
+# Instruções para Execução do Projeto
 
 ## Pré-requisitos
 
