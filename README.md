@@ -44,6 +44,7 @@ npx compodoc -p tsconfig.app.json
 - **NgRx**: Biblioteca para gerenciamento de estado baseada em Redux.
 - **Redux-Persist**: Para persistir o estado da aplicação entre as sessões.
 - **EventEmitter**: Gerenciamento de eventos para comunicação entre componentes.
+- **Compodoc**: Gerador de documentação de codigos
 
 ## Padrões de Projeto Adotados
 
