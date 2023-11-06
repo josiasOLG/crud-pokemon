@@ -25,6 +25,17 @@ Com a API rodando, inicie o projeto Angular com:
 
 `npm start`
 
+# Utilização do compodoc ara geração de documentação do codigo
+
+## Geração da Documentação com Compodoc
+
+Antes de gerar a documentação do projeto usando o Compodoc, certifique-se de ter o Compodoc instalado globalmente no seu sistema. Se você ainda não o instalou, você pode fazer isso executando o seguinte comando:
+
+````bash
+npm install -g @compodoc/compodoc
+npx compodoc -p tsconfig.app.json
+
+
 ## Tecnologias Utilizadas
 
 - **API de Pokémon TCG**: Para dados de cartas Pokémon.
@@ -67,6 +78,4 @@ npm install --save jszip@^3.7.1
 
 #Json server
 npm install -g json-server
-
-
-```
+````
