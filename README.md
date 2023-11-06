@@ -34,7 +34,7 @@ Antes de gerar a documentação do projeto usando o Compodoc, certifique-se de t
 ````bash
 npm install -g @compodoc/compodoc
 npx compodoc -p tsconfig.app.json
-
+````
 
 ## Tecnologias Utilizadas
 
