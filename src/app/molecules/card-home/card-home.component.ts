@@ -3,7 +3,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 @Component({
   selector: 'app-card',
   template: `
-    <div class="grid grid-cols-4 md:grid-cols-5 gap-4 relative">
+    <div class="col-span-4 relative">
       <div class="pk-card grid grid-cols-5 card">
         <app-button [className]="'pk-button__more'" (onClick)="toggleDropdown.emit(deck.id)">
           <igx-icon fontSet="material">more_vert</igx-icon>
