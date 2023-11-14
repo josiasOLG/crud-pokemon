@@ -12,14 +12,15 @@ import {
   selector: 'app-card-list',
   template: `
     <ng-container *ngIf="decks.length; else noDataTemplate">
-      <app-card
-        *ngFor="let deck of decks"
-        [deck]="deck"
-        (toggleDropdown)="toggleDropdown($event)"
-        (editDeck)="onEditDeck($event)"
-        (deleteDeck)="onDeleteDeck($event)"
-        [dropdownStates]="dropdownStates"
-      ></app-card>
+      <div class="grid grid-cols-4 gap-4">
+        <app-card  *ngFor="let deck of decks"
+            [deck]="deck"
+            (toggleDropdown)="toggleDropdown($event)"
+            (editDeck)="onEditDeck($event)"
+            (deleteDeck)="onDeleteDeck($event)"
+            [dropdownStates]="dropdownStates"
+          ></app-card>  
+      </div>
     </ng-container>
     <ng-template #noDataTemplate>
       <app-no-data></app-no-data>
@@ -50,9 +51,9 @@ export class CardListComponent {
     }
   }
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef) { }
 
-  handleDropdown(id: number) {}
+  handleDropdown(id: number) { }
 
   /**
    * Alternar o estado de um dropdown.

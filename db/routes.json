@@ -1,0 +1,6 @@
+{
+    "/login": "/login",
+    "/decks/": "/decks",
+    "/decks/:id": "/decks/:id"
+}
+  
